@@ -1,4 +1,4 @@
-package springboot.learningwithguru.spring6;
+package springboot.learningwithguru.spring6.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
