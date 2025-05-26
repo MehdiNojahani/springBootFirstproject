@@ -49,4 +49,18 @@ public class Book {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+
+    //override methods for comparison entity object and db object
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book book)) return false;
+
+        return getId() == book.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return getId();
+    }
 }
