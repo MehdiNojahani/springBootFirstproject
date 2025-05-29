@@ -9,12 +9,14 @@ import java.util.Set;
 public class Author {
 
     //Author attribute :
+    //set id annotation for entity
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String firstName;
     private String lastName;
 
+    // Entity tables for db relational
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 
