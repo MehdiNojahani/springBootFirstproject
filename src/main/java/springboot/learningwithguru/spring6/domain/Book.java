@@ -8,12 +8,15 @@ import java.util.Set;
 @Entity
 public class Book {
 
+    //Book class (Entity) attribute
+    //set id annotation for entity
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String title;
     private String isbn;
 
+    // Entity tables for db relational ( origin table )
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id")
             , inverseJoinColumns = @JoinColumn(name = "author_id"))
